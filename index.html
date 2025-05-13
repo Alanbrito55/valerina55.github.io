@@ -1,44 +1,46 @@
 <html>
 <head>
+<script type = "text/javascript">
+function paquita(){
+var con=document.getElementById("nombre").value;
+var conte=document.getElementById("correo").value;
+var cone=document.getElementById("edad").value;
+var hombre = document.getElementById("hombre").checked;
+var mujer = document.getElementById("mujer").checked;
+var agree = document.getElementById("agree").checked;
+
+if(conte==""){
+alert("te falta tu correo");
+return false;
+}
+if(con==""){
+alert("te falta tu nombre");
+return false;
+}
+if(cone==""){
+alert("te falta tu edad");
+return false;
+}
+if(!hombre && !mujer){
+alert("falta poner genero");
+return false;
+}
+if (!agree) {
+alert("Por favor selecciona para continuar");
+return false;
+}
+}
+</script>
 </head>
 <body>
-<nav>
-<ul>
-<li>ventas
-       <ol>
-            <li>tenis </li>
-            <li>talla </li>
-            <li>color </li>
-       </ol>
-</li>
-<li>marcas
-      <ol> 
-           <li>marcas </li>
-           <li>producto </li>
-           <li>precio </li>
-      </ol>
-</li>
-<li>lugares
-      <ol>
-          <li>avenida </li>
-          <li>centro </li>
-          <li>zona </li>
-      </ol>
-</li>
-<li>promos
-      <ol>
-          <li>mayoreo </li>
-          <li>menudeo </li>
-          <li>promo </li>
-      </ol>
-</li>
-<li>apartir
-      <ol>
-          <li>10 </li>
-          <li>15 </li>
-          <li>50 </li>
-      </ol>
-</li>
-</nav>
+<form action "ejemp.html" method="POST">
+correo<input type = "text" name="asds" id="correo">
+nombre<input type = "text" name="aaaa" id="nombre">
+edad<input type = "number" name="addd" id="edad">
+masculino<input type = "radio" name= "dell" id="hombre">
+femenin<input type = "radio" name= "dell" id="mujer">
+aceptar terminos<input type = "checkbox" name= "dell" id="agree">
+<input type = "button" value ="Registrarse" onclick="paquita()">
+</form>
 </body>
 </html>
